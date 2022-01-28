@@ -185,3 +185,6 @@ else ()
   target_compile_definitions(spatialite PRIVATE OMIT_ICONV)
 endif ()
 
+if (NOT HAVE_UNISTD_H)
+  target_compile_definitions(spatialite PRIVATE YY_NO_UNISTD_H)
+endif ()
