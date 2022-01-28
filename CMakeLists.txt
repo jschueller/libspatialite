@@ -188,3 +188,11 @@ endif ()
 if (NOT HAVE_UNISTD_H)
   target_compile_definitions(spatialite PRIVATE YY_NO_UNISTD_H)
 endif ()
+
+if (WIN32 AND BUILD_SHARED_LIBS)
+  target_compile_definitions(spatialite PRIVATE DLL_EXPORT)
+endif ()
+
+if (WIN32)
+  target_compile_definitions(spatialite PRIVATE _CRT_SECURE_NO_WARNINGS)
+endif ()
