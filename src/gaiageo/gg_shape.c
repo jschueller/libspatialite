@@ -58,7 +58,7 @@ the terms of any one of the MPL, the GPL or the LGPL.
 #endif
 
 #ifdef _WIN32
-#include <Windows.h>
+#include <windows.h>
 #endif
 
 #include <spatialite/sqlite.h>
